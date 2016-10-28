@@ -22,9 +22,10 @@ namespace MissionSite.Controllers
         public ActionResult Missions()
         {
             List<SelectListItem> mission = new List<SelectListItem>();
-            mission.Add(new SelectListItem { Text = "Korea, Busan Mission", Value = "0" });
-            mission.Add(new SelectListItem { Text = "Brazil, Rio De Janeiro Mission", Value = "1" });
-            mission.Add(new SelectListItem { Text = "Czech/Slovak Mission", Value = "2" });
+            mission.Add(new SelectListItem { Text = "Select a Mission", Value = "0" });
+            mission.Add(new SelectListItem { Text = "Korea, Busan Mission", Value = "1" });
+            mission.Add(new SelectListItem { Text = "Brazil, Rio De Janeiro Mission", Value = "2" });
+            mission.Add(new SelectListItem { Text = "Czech/Slovak Mission", Value = "3" });
             ViewBag.Mission = mission;
 
             return View();
