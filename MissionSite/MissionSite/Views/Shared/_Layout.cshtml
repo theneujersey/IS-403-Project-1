@@ -8,6 +8,36 @@
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <link rel="icon" type="image/jpg" href="../Content/Images/favicon.jpg" />
     <script src="~/Scripts/modernizr-2.6.2.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 50) {
+                    $('#back-to-top').fadeIn();
+                } else {
+                    $('#back-to-top').fadeOut();
+                }
+            });
+            // scroll body to 0px on click
+            $('#back-to-top').click(function () {
+                $('#back-to-top').tooltip('hide');
+                $('body,html').animate({
+                    scrollTop: 0
+                }, 800);
+                return false;
+            });
+            $('#scroll-to-bottom').click(function () {
+                var section = $(this).attr("href");
+                $("html, body").animate({
+                    scrollTop: "450px"
+                }, 800);
+            });
+
+            $('#back-to-top').tooltip('show');
+
+        });
+      
+    </script>
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -25,7 +55,7 @@
                     <li>@Html.ActionLink("Home", "Index", "Home", new { }, new { @class = "nav navbar" })</li>
                     <li>@Html.ActionLink("Missions", "Missions", "Home", new { }, new { @class = "nav navbar" })</li>
                     <li>@Html.ActionLink("About us", "About", "Home", new { }, new { @class = "nav navbar" })</li>
-                    <li>@Html.ActionLink("Contact", "Index", "Contact", new { }, new { @class = "nav navbar" })</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home", new { }, new { @class = "nav navbar" })</li>
                 </ul>
             </div>
         </div>
@@ -41,5 +71,7 @@
 
     <script src="~/Scripts/jquery-1.10.2.min.js"></script>
     <script src="~/Scripts/bootstrap.min.js"></script>
+    
+
 </body>
 </html>
