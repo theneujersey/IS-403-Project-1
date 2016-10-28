@@ -5,3 +5,8 @@
 
 <h2>Missions</h2>
 
+@using (Html.BeginForm())
+{
+    <h4>Select a Mission</h4>
+    @Html.DropDownList("Mission")
+}
