@@ -1,6 +1,11 @@
 ﻿
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Home";
 }
-
+<div class="jumbotron">
+    <div class="bg"></div>
+    <h1>Welcome Missionaries!</h1>
+    <p class="lead">Connect with your mission.</p>
+    @Html.ActionLink("Connect »", "Missions", "Home", new { }, new { @class = "btn btn-primary btn-large" })
+</div>
 <h2>Index</h2>
