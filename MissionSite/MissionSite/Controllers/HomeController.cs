@@ -24,6 +24,13 @@ namespace MissionSite.Controllers
 
         public ActionResult Contact()
         {
+            List<SelectListItem> subject = new List<SelectListItem>();
+            subject.Add(new SelectListItem { Text = "Korea, Busan", Value = "0" });
+            subject.Add(new SelectListItem { Text = "Brazil, Rio De Janeiro", Value = "1" });
+            subject.Add(new SelectListItem { Text = "Jacob's Mission", Value = "2" });
+            subject.Add(new SelectListItem { Text = "Other", Value = "3" });
+            ViewBag.Subject = subject;
+
             return View();
         }
     }
