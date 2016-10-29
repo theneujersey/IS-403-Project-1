@@ -24,7 +24,7 @@ namespace MissionSite.Controllers
             List<SelectListItem> mission = new List<SelectListItem>();
             mission.Add(new SelectListItem { Text = "Korea, Busan Mission", Value = "0" });
             mission.Add(new SelectListItem { Text = "Brazil, Rio De Janeiro Mission", Value = "1" });
-            mission.Add(new SelectListItem { Text = "Czech/Slovak Mission", Value = "2" });
+            mission.Add(new SelectListItem { Text = "Czech/Slovak Mission", Value = "2"});
             ViewBag.Mission = mission;
 
             return View();
@@ -42,9 +42,18 @@ namespace MissionSite.Controllers
             return View();
         }
 
-        public ActionResult missionFAQs()
+        public ViewResult missionFAQs(string Mission)
         {
-            return View();
+            if (Mission.Equals("0"))
+                ViewBag.messageString = "Korea, Busan Mission";
+            else if (Mission.Equals("1"))
+                ViewBag.messageString = "Brazil, Rio De Janeiro Mission";
+            else if (Mission.Equals("2"))
+                ViewBag.messageString = "Czech/Slovak Mission";
+            else
+                ViewBag.messageString = "Other";
+
+            return View("missionFAQs");
         }
     }
 }
