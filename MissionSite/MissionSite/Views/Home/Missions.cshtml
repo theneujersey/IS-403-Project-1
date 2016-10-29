@@ -2,11 +2,14 @@
 @{
     ViewBag.Title = "Missions";
 }
-
+<link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
 <h2>Missions</h2>
 
-@using (Html.BeginForm())
+@using (Html.BeginForm("missionFAQs", "Home", FormMethod.Get))
 {
-    <h4>Select a Mission</h4>
-    @Html.DropDownList("Mission")
+    <fieldset>
+        <h4>Select a Mission</h4>
+        @Html.DropDownList("Mission")
+        <input type="submit" value="Submit" />
+    </fieldset>
 }
