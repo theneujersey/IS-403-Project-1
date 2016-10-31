@@ -53,6 +53,14 @@ namespace MissionSite.Controllers
             else
                 ViewBag.messageString = "Other";
 
+           
+
+            return View();
+        }
+
+        public ViewResult Questions(string Question)
+        {
+            ViewBag.userQuestion = Question;
             return View("missionFAQs");
         }
     }
