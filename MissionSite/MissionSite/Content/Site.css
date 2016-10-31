@@ -123,16 +123,4 @@ ul{
 #breadcrumbs-one .current::before{
   content: normal;
 }
-.container.box{
-    border:1px solid black;
-    border-radius:10px;
-    padding: 0 20px 20px 20px;
-    background-image: linear-gradient(top, #333, #333 20%, transparent 20%, transparent 100%);
-    background-image: -webkit-linear-gradient(top, #333, #333 20%, transparent 20%, transparent 100%) 
-}
-.container.box h2{
-    color:#999;
-}
-td{
-    vertical-align:top;
-}
+
