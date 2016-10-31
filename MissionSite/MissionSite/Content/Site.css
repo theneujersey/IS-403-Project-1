@@ -24,7 +24,7 @@ textarea {
     position: relative;
     z-index: 1;
     height:350px;
-    
+    margin-top: -20px;
 }
 .main{
     padding-top:10%;
@@ -124,3 +124,22 @@ ul{
   content: normal;
 }
 
+.lead{
+    text-decoration: none;
+}
+.lead:hover{
+    text-decoration: none;
+    opacity: .75;
+}
+@media(max-width: 768px){
+    .ytp-thumbnail-overlay-image{
+        width: 300px;
+    }
+}
+a:hover{
+    text-decoration: none;
+    opacity: 0.75;
+}
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, a, p{
+    font-family: 'Roboto', sans-serif;
+}
